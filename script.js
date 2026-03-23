@@ -5,8 +5,7 @@ const navbar  = document.getElementById('navbar');
 const heroEl  = document.getElementById('domů');
 
 const updateNavbar = () => {
-  const heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
-  if (heroBottom <= 0) {
+  if (window.scrollY > 10) {
     navbar.classList.add('scrolled');
   } else {
     navbar.classList.remove('scrolled');
