@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PYTLOUNSTAV s.r.o. — Projektujeme a stavíme váš sen</title>
+  <meta name="description" content="Rodinné domy, komerční stavby a rekonstrukce na klíč. Zkušenosti od roku 1995. Jivina, Středočeský kraj.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+
+      <a href="#domů" class="nav-logo">
+        <img src="media/logo.png" alt="" class="nav-logo-img">
+        PYTLOUNSTAV
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#o-nas">O nás</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+
+      <a href="#kontakt" class="nav-cta">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Kontakt
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Otevřít menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigace">
+    <a href="#sluzby">Služby</a>
+    <a href="#o-nas">O nás</a>
+    <a href="#reference">Reference</a>
+    <a href="#kontakt" class="mob-cta">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      Kontakt
+    </a>
+  </div>
+
+  <!-- ═══════════════ HERO — full bleed ══════════════ -->
+  <section id="domů" class="hero">
+
+    <div class="hero-bg">
+      <img
+        src="media/hero.jpg"
+        alt="Rodinný dům od PYTLOUNSTAV"
+        class="hero-bg-img"
+      >
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+
+        <div class="hero-tag">Pytlounstav s.r.o.</div>
+
+        <h1 class="hero-h1">
+          Stavíme<br>
+          <span class="accent">váš</span> sen
+        </h1>
+
+        <p class="hero-sub">
+          Projektujeme a realizujeme rodinné domy, komerční stavby
+          a rekonstrukce na klíč ve Středočeském kraji a okolí.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#kontakt" class="btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            Kontaktujte nás
+          </a>
+          <a href="#reference" class="btn-ghost">
+            Naše reference
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════ STATS ══════════════════════════ -->
+  <section class="stats-section">
+    <div class="stats-group">
+      <div class="stat-item">
+        <div class="stat-num" data-target="30" data-suffix=" +">0</div>
+        <div class="stat-label">Dokončených projektů</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="25" data-suffix=" +">0</div>
+        <div class="stat-label">Let zkušeností</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="100" data-suffix=" %">0</div>
+        <div class="stat-label">Spokojených klientů</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SERVICES ═══════════════════════ -->
+  <section id="sluzby" class="services-section">
+    <div class="services-inner">
+
+      <div class="services-header">
+        <div>
+          <div class="section-label reveal">Naše služby</div>
+          <h2 class="services-h2 reveal reveal-delay-1">Co<br>nabízíme</h2>
+        </div>
+        <p class="services-desc reveal reveal-delay-2">
+          Komplexní stavební služby od prvního návrhu až po předání
+          hotového díla. Zajišťujeme vše – projekt, povolení i realizaci.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Projektování rodinných domů</h3>
+          <p class="service-desc">Vašemu snu dáme konkrétní podobu. Nasloucháme vašim představám a zachytíme vše v potřebné dokumentaci.</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Stavby rodinných domů na klíč</h3>
+          <p class="service-desc">Kompletní realizace od zpracování dle Vašich představ přes obstarání veškerých dokladů a povolení až po samotnou realizaci stavby a předání hotového domu.</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Dílčí stavební práce</h3>
+          <p class="service-desc">Oceňujeme Vaši šikovnost a chuť postavit svůj dům částečně svépomocí a rádi se ujmeme jen některých částí, např. základové desky, hrubé stavby, fasády apod.</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"/>
+              <polyline points="1 20 1 14 7 14"/>
+              <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Rekonstrukce a přestavby</h3>
+          <p class="service-desc">Chuť pozměnit interiér rádi podpoříme. Máme bohaté zkušenosti s vnitřními přestavbami, neváhejte se na nás obrátit s rekonstrukcí koupelny či jinými stavebními úpravami.</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <circle cx="12" cy="15" r="3"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Ostatní stavební činnosti</h3>
+          <p class="service-desc">Pokud byste rádi navlékli svůj dům do nového kabátu či zvelebili okolí, i to Vám můžeme splnit. Zateplení domu, fasáda anebo stavba pergoly, pokládka venkovní dlažby atd., to vše je v našem registru také.</p>
+        </div>
+
+        <div class="service-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="service-title">Dotace Nová zelená úsporám</h3>
+          <p class="service-desc">Využijte skvělé, leč časově omezené příležitosti, jak šetřit nejen přírodu, ale také nemalé částky na provozu Vašeho domu díky zatím ještě stále běžícímu dotačnímu programu. Celý proces si vezmeme na starost my.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════════════════ -->
+  <section id="o-nas" class="about-section">
+    <div class="about-inner">
+
+      <div class="about-left">
+        <div class="section-label reveal">O nás</div>
+        <h2 class="about-h2 reveal reveal-delay-1">Náš<br>příběh</h2>
+        <div class="about-rule reveal reveal-delay-2"></div>
+
+        <p class="about-body reveal reveal-delay-2">
+          Tomáš Pytloun začal ve stavebnictví v roce 1995 jako stavební mistr.
+          Postupně se vzdělával a pracoval jako vedoucí staveb a projektant.
+          Rostoucí poptávka klientů ho přivedla k myšlence založit vlastní firmu —
+          místo, kde může pracovat podle vlastních zásad kvality a budovat
+          pevnější vztahy s každým klientem.
+        </p>
+
+        <blockquote class="about-quote reveal reveal-delay-3">
+          „Rád vám pomůžu splnit sny — ať už jde o vysněný rodinný dům
+          nebo vytvoření nových obchodních prostor."
+        </blockquote>
+        <p class="about-author reveal reveal-delay-3">— Tomáš Pytloun, zakladatel</p>
+      </div>
+
+      <div class="values">
+
+        <div class="value-card reveal reveal-delay-1">
+          <div class="value-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <div>
+            <div class="value-title">Poctivá práce</div>
+            <p class="value-desc">Každou stavbu dokončujeme s maximálním nasazením, péčí a osobní odpovědností.</p>
+          </div>
+        </div>
+
+        <div class="value-card reveal reveal-delay-2">
+          <div class="value-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <div class="value-title">Dlouholetá praxe</div>
+            <p class="value-desc">Více než 25 let zkušeností v oboru z nás dělá spolehlivého partnera pro váš projekt.</p>
+          </div>
+        </div>
+
+        <div class="value-card reveal reveal-delay-3">
+          <div class="value-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="value-title">Individuální přístup</div>
+            <p class="value-desc">Ke každému projektu přistupujeme osobně — nasloucháme vašim potřebám a hledáme řešení na míru.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ PORTFOLIO ══════════════════════ -->
+  <section id="reference" class="portfolio-section">
+    <div class="portfolio-inner">
+
+      <div class="portfolio-header">
+        <div>
+          <div class="section-label reveal">Reference</div>
+          <h2 class="portfolio-h2 reveal reveal-delay-1">Naše<br>práce</h2>
+        </div>
+        <a href="#kontakt" class="portfolio-link reveal reveal-delay-2">
+          Domluvit schůzku
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item reveal"           data-index="0"><img src="media/reference/IMG_0003-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+        <div class="portfolio-item reveal reveal-delay-1" data-index="1"><img src="media/reference/IMG_0024-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+        <div class="portfolio-item reveal reveal-delay-2" data-index="2"><img src="media/reference/IMG_0034-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+        <div class="portfolio-item reveal reveal-delay-3" data-index="3"><img src="media/reference/IMG_0050-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+        <div class="portfolio-item reveal reveal-delay-1" data-index="4"><img src="media/reference/IMG_4329-5-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+        <div class="portfolio-item reveal reveal-delay-2" data-index="5"><img src="media/reference/IMG_7160-1-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+        <div class="portfolio-item reveal reveal-delay-3" data-index="6"><img src="media/reference/IMG_7165-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+        <div class="portfolio-item reveal reveal-delay-4" data-index="7"><img src="media/reference/IMG_9966-scaled.jpg" alt="Rodinný dům — referenční projekt PYTLOUNSTAV"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA STRIP ══════════════════════ -->
+  <section class="cta-strip">
+    <div class="cta-inner">
+      <h2 class="cta-h2 reveal">
+        Líbí se vám naše práce? Neváhejte nás kontaktovat.
+      </h2>
+      <a href="#kontakt" class="btn-dark reveal reveal-delay-2">
+        Domluvit schůzku
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ════════════════════════ -->
+  <section id="kontakt" class="contact-section">
+    <div class="contact-inner">
+
+      <!-- Left: contact info -->
+      <div>
+        <div class="section-label reveal">Kontakt</div>
+        <h2 class="contact-h2 reveal reveal-delay-1">Pojďme<br>se sejít</h2>
+        <p class="contact-sub reveal reveal-delay-2">
+          Rádi se s Vámi podělíme o letité zkušenosti z praxe a probereme s Vámi možnosti tak, aby se proveditelnost mohla potkat s Vaším snem.
+        </p>
+
+        <div class="contact-items">
+          <div class="contact-item reveal reveal-delay-1">
+            <div class="contact-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Telefon</div>
+              <a href="tel:+420703162991" class="contact-item-value">+420 703 162 991</a>
+            </div>
+          </div>
+
+          <div class="contact-item reveal reveal-delay-2">
+            <div class="contact-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-label">E-mail</div>
+              <a href="mailto:t.pytloun@volny.cz" class="contact-item-value">t.pytloun@volny.cz</a>
+              <a href="mailto:pytlounstav@seznam.cz" class="contact-item-value2">pytlounstav@seznam.cz</a>
+            </div>
+          </div>
+
+          <div class="contact-item reveal reveal-delay-3">
+            <div class="contact-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Adresa</div>
+              <div class="contact-item-value">Jivina 132</div>
+              <div class="contact-item-value2">294 14 Jivina</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: sticky map -->
+      <div class="contact-visual reveal reveal-delay-2">
+        <iframe
+          class="contact-map-iframe"
+          src="https://maps.google.com/maps?q=Jivina+132,+294+14+Jivina,+Czech+Republic&z=16&output=embed"
+          title="Mapa — PYTLOUNSTAV, Jivina"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-brand">
+          <img src="media/logo.png" alt="" class="footer-logo-img">
+          PYTLOUNSTAV
+        </div>
+        <p class="footer-about">
+          Rodinné domy, komerční stavby a rekonstrukce na klíč.
+          Pracujeme s péčí, poctivostí a letitými zkušenostmi.
+        </p>
+        <p class="footer-legal">
+          IČ: 08831637 &nbsp;·&nbsp; DIČ: CZ08831637<br>
+          Zapsáno u Městského soudu v Praze, C 326048
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Navigace</div>
+        <ul class="footer-links">
+          <li><a href="#domů">Domů</a></li>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#reference">Reference</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Kontakt</div>
+        <div class="footer-contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <a href="tel:+420703162991">+420 703 162 991</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <div>
+            <a href="mailto:t.pytloun@volny.cz">t.pytloun@volny.cz</a>
+            <a href="mailto:pytlounstav@seznam.cz">pytlounstav@seznam.cz</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Jivina 132, 294 14 Jivina</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 PYTLOUNSTAV s.r.o. &nbsp;·&nbsp; <a href="/zasady-zpracovani-osobnich-udaju" class="footer-bottom-link">Zásady zpracování osobních údajů</a></span>
+      <span>Vytvořil Jakub Nevyhoštěný</span>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ LIGHTBOX ═══════════════════════ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Prohlížeč fotografií">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Předchozí fotografie">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Další fotografie">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+    <div class="lightbox-body">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    </div>
+    <div class="lightbox-counter" id="lightboxCounter">1 / 8</div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Zpět nahoru">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

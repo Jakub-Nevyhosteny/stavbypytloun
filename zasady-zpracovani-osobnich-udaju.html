@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zásady zpracování osobních údajů — PYTLOUNSTAV s.r.o.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Page-specific styles ── */
+    .gdpr-hero {
+      background: var(--warm);
+      padding: calc(var(--nav-h) + 64px) 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .gdpr-hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 64px;
+    }
+    .gdpr-hero-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 16px;
+    }
+    .gdpr-hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+      color: var(--dark);
+    }
+
+    .gdpr-content {
+      background: var(--warm);
+      padding: 64px 0 112px;
+    }
+    .gdpr-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 64px;
+    }
+
+    .gdpr-inner h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      color: var(--dark);
+      margin-top: 52px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--yellow);
+    }
+    .gdpr-inner h2:first-child { margin-top: 0; }
+
+    .gdpr-inner p {
+      color: var(--text);
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .gdpr-inner ul {
+      margin: 0 0 14px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .gdpr-inner ul li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.97rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .gdpr-inner ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      background: var(--yellow);
+      border-radius: 50%;
+    }
+
+    .gdpr-h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--dark);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .gdpr-inner .gdpr-date {
+      margin-top: 52px;
+      padding: 16px 20px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--yellow);
+      border-radius: 6px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1100px) {
+      .gdpr-hero-inner,
+      .gdpr-inner { padding: 0 40px; }
+    }
+    @media (max-width: 640px) {
+      .gdpr-hero-inner,
+      .gdpr-inner { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═════════════════════════ -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+
+      <a href="/" class="nav-logo">
+        <img src="media/logo.png" alt="" class="nav-logo-img">
+        PYTLOUNSTAV
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/#sluzby">Služby</a></li>
+        <li><a href="/#o-nas">O nás</a></li>
+        <li><a href="/#reference">Reference</a></li>
+      </ul>
+
+      <a href="/#kontakt" class="nav-cta">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        Kontakt
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Otevřít menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" role="dialog" aria-label="Navigace">
+    <a href="/#sluzby">Služby</a>
+    <a href="/#o-nas">O nás</a>
+    <a href="/#reference">Reference</a>
+    <a href="/#kontakt" class="mob-cta">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      Kontakt
+    </a>
+  </div>
+
+  <!-- ═══════════════ PAGE HEADER ════════════════════ -->
+  <section class="gdpr-hero">
+    <div class="gdpr-hero-inner">
+      <div class="gdpr-hero-label">Právní dokumenty</div>
+      <h1>Zásady zpracování osobních údajů</h1>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTENT ════════════════════════ -->
+  <section class="gdpr-content">
+    <div class="gdpr-inner">
+
+      <h2>Základní ustanovení</h2>
+      <p>Správcem osobních údajů podle článku 4 bod 7 nařízení Evropského parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (dále jen „GDPR") je PYTLOUNSTAV s.r.o., IČ 08831637 se sídlem: Jivina 132, 294 14 Jivina (dále jen „správce").</p>
+      <p>Kontaktní údaje správce jsou: PYTLOUNSTAV s.r.o., Jivina 132, 294 14 Jivina, email: <a href="mailto:t.pytloun@volny.cz">t.pytloun@volny.cz</a> a telefon: <a href="tel:+420703162991">+420 703 162 991</a>.</p>
+      <p>Osobními údaji se rozumí veškeré informace o identifikované nebo identifikovatelné fyzické osobě; identifikovatelnou fyzickou osobou je fyzická osoba, kterou lze přímo či nepřímo identifikovat, zejména odkazem na určitý identifikátor, například jméno, identifikační číslo, lokační údaje, síťový identifikátor nebo na jeden či více zvláštních prvků fyzické, fyziologické, genetické, psychické, ekonomické, kulturní nebo společenské identity této fyzické osoby.</p>
+
+      <h2>Zdroje a kategorie zpracovávaných osobních údajů</h2>
+      <p>Správce zpracovává osobní údaje, které jste mu poskytl/a.</p>
+      <p>Správce zpracovává vaše identifikační a kontaktní údaje a údaje nezbytné pro plnění smlouvy.</p>
+
+      <h2>Zákonný důvod a účel zpracování osobních údajů</h2>
+      <p>Zákonným důvodem zpracování osobních údajů je:</p>
+      <ul>
+        <li>plnění smlouvy mezi vámi a správcem podle čl. 6 odst. 1 písm. b) GDPR.</li>
+      </ul>
+      <p>Účelem zpracování osobních údajů je:</p>
+      <ul>
+        <li>výkon práv a povinností vyplývajících ze smluvního vztahu mezi vámi a správcem.</li>
+      </ul>
+      <p>Ze strany správce nedochází k automatickému individuálnímu rozhodování ve smyslu čl. 22 GDPR.</p>
+
+      <h2>Doba uchování údajů</h2>
+      <p>Správce uchovává osobní údaje:</p>
+      <ul>
+        <li>po dobu nezbytnou k výkonu práv a povinností vyplývajících ze smluvního vztahu mezi vámi a správcem a uplatňování nároků z těchto smluvních vztahů (po dobu 3 let od ukončení smluvního vztahu),</li>
+        <li>po dobu, než je odvolán souhlas se zpracováním osobních údajů pro účely marketingu, nejdéle 3 roky, jsou-li osobní údaje zpracovávány na základě souhlasu.</li>
+      </ul>
+      <p>Po uplynutí doby uchovávání osobních údajů správce osobní údaje vymaže.</p>
+
+      <h2>Vaše práva</h2>
+      <p>Za podmínek stanovených v GDPR máte:</p>
+      <ul>
+        <li>právo na přístup ke svým osobním údajům dle čl. 15 GDPR,</li>
+        <li>právo opravu osobních údajů dle čl. 16 GDPR, popřípadě omezení zpracování dle čl. 18 GDPR,</li>
+        <li>právo na výmaz osobních údajů dle čl. 17 GDPR,</li>
+        <li>právo vznést námitku proti zpracování dle čl. 21 GDPR,</li>
+        <li>právo na přenositelnost údajů dle čl. 20 GDPR.</li>
+      </ul>
+
+      <h2>Podmínky zabezpečení osobních údajů</h2>
+      <p>Správce prohlašuje, že přijal veškerá vhodná technická a organizační opatření k zabezpečení osobních údajů.</p>
+      <p>Správce prohlašuje, že k osobním údajům mají přístup pouze jím pověřené osoby.</p>
+
+      <h2>Závěrečná ustanovení</h2>
+      <p>Svým souhlasem potvrzujete, že jste seznámen/a s podmínkami ochrany osobních údajů a že je v celém rozsahu přijímáte.</p>
+      <p>Správce je oprávněn tyto podmínky změnit. Novou verzi podmínek ochrany osobních údajů zveřejní na svých internetových stránkách.</p>
+
+      <h2>Zásady používání cookies</h2>
+      <h3 class="gdpr-h3">Co jsou cookies</h3>
+      <p>Soubory cookies jsou krátké textové soubory, které internetová stránka odešle do Vašeho prohlížeče. Umožňují internetové stránce zaznamenat informace o Vaší návštěvě, například zvolený jazyk a podobně. Soubory cookies jsou důležité, neboť bez nich by procházení sítě Internet bylo mnohem složitější. Soubory cookies umožňují lepší využití naší internetové stránky a přizpůsobení jejího obsahu Vašim potřebám. Soubory cookies jsou užitečné, protože zvyšují uživatelskou přívětivost opakovaně navštívené internetové stránky.</p>
+
+      <h3 class="gdpr-h3">Jak na webu stavbypytloun.cz používáme cookies</h3>
+      <p>Některé cookies jsou nezbytně nutné pro zajištění provozu webových stránek stavbypytloun.cz po technické stránce. Tento typ cookies ale neuchovává žádná osobní data. Tyto soubory cookie jsou nutné pro základní funkce stránky, a jsou proto vždy povolené.</p>
+
+      <p class="gdpr-date">Tyto podmínky nabývají účinnosti dnem <strong>1. 1. 2026</strong>.</p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-brand">
+          <img src="media/logo.png" alt="" class="footer-logo-img">
+          PYTLOUNSTAV
+        </div>
+        <p class="footer-about">
+          Rodinné domy, komerční stavby a rekonstrukce na klíč.
+          Pracujeme s péčí, poctivostí a letitými zkušenostmi.
+        </p>
+        <p class="footer-legal">
+          IČ: 08831637 &nbsp;·&nbsp; DIČ: CZ08831637<br>
+          Zapsáno u Městského soudu v Praze, C 326048
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Navigace</div>
+        <ul class="footer-links">
+          <li><a href="/">Domů</a></li>
+          <li><a href="/#sluzby">Služby</a></li>
+          <li><a href="/#o-nas">O nás</a></li>
+          <li><a href="/#reference">Reference</a></li>
+          <li><a href="/#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Kontakt</div>
+        <div class="footer-contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.81 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <a href="tel:+420703162991">+420 703 162 991</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <div>
+            <a href="mailto:t.pytloun@volny.cz">t.pytloun@volny.cz</a>
+            <a href="mailto:pytlounstav@seznam.cz">pytlounstav@seznam.cz</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Jivina 132, 294 14 Jivina</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 PYTLOUNSTAV s.r.o. &nbsp;·&nbsp; <a href="/zasady-zpracovani-osobnich-udaju" class="footer-bottom-link">Zásady zpracování osobních údajů</a></span>
+      <span>Vytvořil Jakub Nevyhoštěný</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
