@@ -218,7 +218,7 @@ const statsObserver = new IntersectionObserver((entries) => {
       animateCounter(el, i * 220); // 220ms stagger between each
     });
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.1 });
 
 const statsGroup = document.querySelector('.stats-group');
 if (statsGroup) statsObserver.observe(statsGroup);
