@@ -1,5 +1,77 @@
 'use strict';
 
+// ═══════════════ COOKIE CONSENT ══════════════════════
+const COOKIE_KEY = 'pytlounstav_cookie_consent';
+
+const cookieBanner      = document.getElementById('cookie-banner');
+const cookieOverlay     = document.getElementById('cookie-overlay');
+const cookieAcceptBtn   = document.getElementById('cookie-accept');
+const cookieRejectBtn   = document.getElementById('cookie-reject');
+const cookieSettingsBtn = document.getElementById('cookie-settings-btn');
+const mapIframe         = document.getElementById('map-iframe');
+const mapPlaceholder    = document.getElementById('map-placeholder');
+const mapCookieAccept   = document.getElementById('map-cookie-accept');
+
+const showCookieBanner = () => {
+  document.body.classList.add('cookie-pending');
+  cookieBanner.classList.add('active');
+  cookieOverlay.classList.add('active');
+  cookieSettingsBtn.hidden = true;
+  cookieAcceptBtn.focus();
+};
+
+const hideCookieBanner = () => {
+  cookieBanner.classList.remove('active');
+  cookieOverlay.classList.remove('active');
+  document.body.classList.remove('cookie-pending');
+  cookieSettingsBtn.hidden = false;
+};
+
+const applyConsent = (accepted) => {
+  if (accepted) {
+    mapIframe.src = mapIframe.dataset.src;
+    mapIframe.style.display = '';
+    if (mapPlaceholder) mapPlaceholder.style.display = 'none';
+  } else {
+    mapIframe.style.display = 'none';
+    if (mapPlaceholder) mapPlaceholder.style.display = '';
+  }
+};
+
+const handleAccept = () => {
+  localStorage.setItem(COOKIE_KEY, 'accepted');
+  hideCookieBanner();
+  applyConsent(true);
+};
+
+const handleReject = () => {
+  localStorage.setItem(COOKIE_KEY, 'rejected');
+  hideCookieBanner();
+  applyConsent(false);
+};
+
+cookieAcceptBtn.addEventListener('click', handleAccept);
+cookieRejectBtn.addEventListener('click', handleReject);
+if (mapCookieAccept) mapCookieAccept.addEventListener('click', handleAccept);
+
+// Re-open banner from floating settings button
+cookieSettingsBtn.addEventListener('click', () => {
+  showCookieBanner();
+});
+
+// Init on load
+const savedConsent = localStorage.getItem(COOKIE_KEY);
+if (savedConsent === 'accepted') {
+  applyConsent(true);
+  cookieSettingsBtn.hidden = false;
+} else if (savedConsent === 'rejected') {
+  applyConsent(false);
+  cookieSettingsBtn.hidden = false;
+} else {
+  // No decision yet — show banner immediately
+  showCookieBanner();
+}
+
 // ─── NAVBAR — transparent over hero, white after ──────
 const navbar  = document.getElementById('navbar');
 const heroEl  = document.getElementById('domů');

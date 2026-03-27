@@ -15,6 +15,43 @@
 </head>
 <body>
 
+  <!-- ═══════════════ COOKIE CONSENT ══════════════════ -->
+  <div id="cookie-overlay" class="cookie-overlay" aria-hidden="true"></div>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Souhlas s cookies" aria-modal="true">
+    <div class="cookie-banner-inner">
+      <div class="cookie-banner-content">
+        <div class="cookie-banner-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10c0-.34-.017-.676-.05-1.007A2.5 2.5 0 0 1 19.5 8.5a2.5 2.5 0 0 1-2-4A9.96 9.96 0 0 0 12 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8.5" cy="10.5" r="1.25" fill="currentColor"/>
+            <circle cx="14" cy="14.5" r="1.25" fill="currentColor"/>
+            <circle cx="9" cy="15.5" r="0.75" fill="currentColor"/>
+            <circle cx="15" cy="9" r="0.75" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="cookie-banner-text">
+          <strong class="cookie-banner-title">Tento web používá cookies</strong>
+          <p class="cookie-banner-desc">Součástí stránky je interaktivní mapa Google Maps, která může ukládat cookies do vašeho prohlížeče. Přijetím souhlasíte s jejich použitím.</p>
+        </div>
+      </div>
+      <div class="cookie-banner-actions">
+        <button id="cookie-reject" class="cookie-btn cookie-btn-reject" type="button">Odmítnout</button>
+        <button id="cookie-accept" class="cookie-btn cookie-btn-accept" type="button">Přijmout cookies</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie settings floating button (shown after consent) -->
+  <button id="cookie-settings-btn" class="cookie-settings-btn" type="button" aria-label="Nastavení cookies" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10c0-.34-.017-.676-.05-1.007A2.5 2.5 0 0 1 19.5 8.5a2.5 2.5 0 0 1-2-4A9.96 9.96 0 0 0 12 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="8.5" cy="10.5" r="1.25" fill="currentColor"/>
+      <circle cx="14" cy="14.5" r="1.25" fill="currentColor"/>
+      <circle cx="9" cy="15.5" r="0.75" fill="currentColor"/>
+    </svg>
+  </button>
+
   <!-- ═══════════════ NAVBAR ═════════════════════════ -->
   <nav id="navbar">
     <div class="nav-inner">
@@ -388,14 +425,26 @@
 
       <!-- Right: sticky map -->
       <div class="contact-visual reveal reveal-delay-2">
-        <iframe
-          class="contact-map-iframe"
-          src="https://maps.google.com/maps?q=Jivina+132,+294+14+Jivina,+Czech+Republic&z=16&output=embed"
-          title="Mapa — PYTLOUNSTAV, Jivina"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div class="map-wrapper">
+          <iframe
+            id="map-iframe"
+            class="contact-map-iframe"
+            data-src="https://maps.google.com/maps?q=Jivina+132,+294+14+Jivina,+Czech+Republic&z=16&output=embed"
+            title="Mapa — PYTLOUNSTAV, Jivina"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            style="display:none"
+          ></iframe>
+          <div id="map-placeholder" class="map-placeholder" style="display:none">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.4"/>
+              <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <p>Pro zobrazení mapy je nutné přijmout cookies.</p>
+            <button type="button" id="map-cookie-accept" class="cookie-btn cookie-btn-accept">Přijmout cookies</button>
+          </div>
+        </div>
       </div>
 
     </div>
