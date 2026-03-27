@@ -1053,15 +1053,32 @@ a.contact-item-value2 { text-decoration: none; transition: color 0.2s ease; }
   position: sticky;
   top: calc(var(--nav-h) + 20px);
   align-self: start;
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: var(--shadow-card);
-  border-radius: 12px;
+  background: var(--warm-2);
+  border: 1px solid var(--border);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
 .contact-map-iframe {
   width: 100%;
-  height: 100%;
+  height: calc(100svh - var(--nav-h) - 64px);
+  min-height: 400px;
+  max-height: 700px;
   border: none;
   display: block;
+  flex: 1;
 }
 
 /* ─── FOOTER ─────────────────────────────────────────── */
@@ -1208,7 +1225,7 @@ a.contact-item-value2 { text-decoration: none; transition: color 0.2s ease; }
   .value-card { flex: none; }
   .contact-inner { grid-template-columns: 1fr; gap: 24px; }
   .contact-visual { position: relative; top: 0; }
-  .map-wrapper { height: 360px; max-height: 360px; }
+  .contact-map-iframe { height: 360px; max-height: 360px; }
   .services-header { grid-template-columns: 1fr; }
   .cta-inner { flex-direction: column; align-items: flex-start; gap: 32px; }
   .portfolio-header { flex-direction: column; align-items: flex-start; }
@@ -1492,25 +1509,7 @@ body.cookie-pending {
   transform: scale(0.92);
 }
 
-/* ─── Map wrapper & placeholder ─────────────────────── */
-.map-wrapper {
-  width: 100%;
-  height: calc(100svh - var(--nav-h) - 64px);
-  min-height: 400px;
-  max-height: 700px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  position: relative;
-}
-
-.map-wrapper .contact-map-iframe {
-  height: 100%;
-  max-height: none;
-  border-radius: 0;
-  border: none;
-}
-
+/* ─── Map placeholder ────────────────────────────────── */
 .map-placeholder {
   position: absolute;
   inset: 0;
@@ -1551,10 +1550,5 @@ body.cookie-pending {
   .cookie-banner-actions .cookie-btn {
     flex: 1;
     justify-content: center;
-  }
-
-  .map-wrapper {
-    height: 360px;
-    max-height: 360px;
   }
 }
